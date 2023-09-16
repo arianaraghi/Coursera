@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototypes &amp; Inheritance</title>
+</head>
+<body>
+
+    <h1>Prototypes &amp; Inheritance</h1>
+
+    <script>
+        function iPhone(){}
+
+        iPhone.prototype.faceId = function(){
+            console.log('unlock my iPhone with my face!');
+        }
+
+        iPhone.prototype.video = function(){
+            console.log('take 4k video with my iPhone!');
+        }
+
+        iPhone.prototype.stocksApp = function(){
+            console.log('find out what the stock market is doing');
+        }
+
+        let myPhone = new iPhone();
+        myPhone.faceId();
+
+        myPhone.app = "instagram";
+
+        myPhone.stocksApp = function(){
+            console.log('don\'t show anything');
+        }
+
+        myPhone.stocksApp = undefined;
+        console.log(myPhone);
+
+
+        const fruits = ['banana', 'apple', 'orange'];
+        console.log(fruits);
+
+        const carManufactor = {
+            name: "Honda",
+            model: "Accord",
+            trimLevel: "ex",
+            baseFeatures: ["wheels", "engine", "seats"], 
+            entertainment: "Crappy audio system"
+        }
+
+        const dealership = Object.create(carManufactor);
+        dealership.equipment = "roof rack";
+        dealership.warranty = "extended";
+        dealership.branding = 'licensse plate frame';
+
+        const myCar = Object.create(dealership);
+
+        myCar.custom = "after market trailer hitch";
+        myCar.bumperSticker = "save the Llamas!";
+        myCar.entertainment = "fancy audio system";
+
+        console.log(myCar.model);
+        console.log(myCar.branding);
+        console.log(myCar.entertainment);
+
+        for(const key in myCar){
+            const val = myCar[key];
+            console.log(`key is "${key}"" and value is "${val}"`);
+        }
+
+        for(const key in myCar){
+            if(myCar.hasOwnProperty(key)){
+                const val = myCar[key];
+                console.log(`Own Property key is "${key}"" and value is "${val}"`);
+            }
+        }
+    </script>
+    
+</body>
+</html>

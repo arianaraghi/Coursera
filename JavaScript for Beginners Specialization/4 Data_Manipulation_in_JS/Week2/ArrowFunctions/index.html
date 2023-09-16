@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functinos</title>
+</head>
+
+<body>
+    <h1>Arrow Functions</h1>
+
+    <script>
+        function makeUpperCase(aString) {
+            return aString.toUpperCase();
+        }
+
+        const makeLowerCase = function (aString) {
+            return aString.toLowerCase();
+        }
+
+        const theStringItselfButUpperCase = aString => aString.toUpperCase();
+
+        const fullName = (fname, lname) => `${fname} ${lname}`;
+
+        const FullName = () => {
+            const fname = 'Bill';
+            const lname = 'Mead';
+            return `${fname} ${lname}`;
+        }
+
+        const fruits = ['banana', 'apple', 'lemon', 'kiwi'];
+        const upperFruit = [];
+        fruits.forEach(function (thisFruit) {
+            upperFruit.push(thisFruit.toUpperCase());
+        });
+        upperFruit.forEach(thisFruit => {
+            lowerFruit.push(thisFruit.toLowerCase())
+        });
+        
+
+        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //Arrow Functions can not be used as constructors
+        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        const Employee = function(fname, lname, jobTitle){
+            this.fname = fname;
+            this.lname = lname;
+            this.position = jobTitle;
+            this.fullName = ()=>`${fname} ${lanem}`;
+        }
+
+        const id1234 = new Employee('bob', 'smith', 'mechanic');
+
+
+        
+    </script>
+</body>
+
+</html>
