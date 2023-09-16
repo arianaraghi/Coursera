@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		.blue{ color: blue;}
+	</style>
+	<title>Document</title>
+</head>
+<body>
+	<p id = 'one'> here is some text</p>
+	<h1>DOM Example</h1>
+	<p>a par</p>
+	<p>another par</p>
+	<p class="yellow">one more par</p>
+	<p class = 'blue'> a blue par</p>
+	<div id = 'special'>
+		<p>a par for deleting elements</p>
+		<p>a not blue par</p>
+		<p>a par in div</p>
+		<p class="cheese">another par in div</p>
+	</div>
+	<label><input type = "checkbox">YES!</label>
+	<label><input type="radio"> NO!</label>
+	<p>a par for creating elements</p>
+	<script>
+		
+		var text = document.getElementsByTagName('p');
+		for(var eachEl of text){
+			eachEl.style.color = 'blue';
+			//alert(`showing par ${eachEl}`);
+		}
+		document.getElementById('one').style.color = 'red';
+		console.log(text);
+
+		var text2 = document.getElementsByClassName('yellow');
+		for(var eachEl of text2){
+			eachEl.style.color = 'yellow';
+			//alert(`showing another ${eachEl}`);
+		}
+
+		var text3 = document.querySelector('#special .cheese'); //CSS indexing should be inputed in these methods
+		text3.style.fontSize = '20px'
+
+		var text4 = document.querySelectorAll('#special p');
+		for(var eachEl of text4){
+			eachEl.style.color = 'green';
+		}
+
+		var theDiv = document.getElementById('special');
+		theDiv.innerHTML = '<p>a par in div</p> \n<p class=\'cheese\'>another par in div</p>\n<p>one more par in div</p>'
+
+		var firstPar = document.querySelector('#special p');
+		firstPar.className  ='blue';
+
+		var myCheckbox = document.querySelector('input');
+		myCheckbox.setAttribute('checked', 'checked');
+		
+		var myTag = document.createElement('p');
+		var sentence = document.createTextNode('another par fpr creating elements');
+		myTag.appendChild(sentence);
+		document.querySelector('div').appendChild(myTag);
+
+		theDiv = document.querySelector('div');
+		theDiv.removeChild(theDiv.children[0]);
+
+
+	
+	</script>
+</body>
+</html>

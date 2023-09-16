@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>something</h1>
+
+	<p>one oar</p>
+	<p>two oar</p>
+	<p>three oar</p>
+	<script>
+		var variable = 'global';
+		function testScope(){
+			oopsGlobal = 'this is accidentally global';
+			var variable = 'local';
+			console.log(variable);
+		}
+		testScope();
+		console.log(oopsGlobal);
+
+		//Strategy1: never use global scope
+		(function(){
+			var myPs = document.querySelectorAll('p');
+			for (eachEl of myPs){
+				eachEl.style.color = 'red';
+			}
+		}());
+
+		//strategy2: use strict
+		"use strict";s
+
+		newVar = 'not properly defined';
+		console.log(newVar);
+
+		//strategy3: const and let
+		const cheesse = 'yummy'; // this will never change
+		for(let i=0; i<10; i++){
+			console.log(i)
+		}
+		console.log(i); // this will through an error
+
+
+	</script>
+</body>
+</html>

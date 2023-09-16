@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		.red {
+			color: red;
+		}
+	</style>
+	<title>Document</title>
+</head>
+<body>
+	<h1>Challenge 19 head</h1>
+	<p id = 'copyright'>Challenge 17 par</p>
+	<p>Challenge 18 pars</p>
+	<p>Challenge 18 pars</p>
+	<p class = 'date'>Challenge 19 date</p>
+	<script>
+		//Ch1
+		var firstName = "Bill";
+		var lastName = 'Mead';
+		console.log(firstName);
+		console.log(lastName);
+		//Ch2
+		console.log(`${firstName} ${lastName}`);
+		//Ch3
+		var adjectiv = 'tall';
+		console.log(`We all know that ${firstName} is very ${adjectiv}`);
+		//Ch4
+		var name = prompt("Whats your name?", "Bob");
+		console.log(name);
+		//Ch5
+		var number = prompt('Please enter a number.', '');
+		if(number < 10){
+			console.log('You entered a number a number less than 10');
+		} else if (number > 9){
+			console.log('You entered a big number');
+		} 
+		//Ch6
+		else{
+			console.log('You didn\'t enter a number');
+		}
+		if(typeof(number) != typeof(2)){
+			console.log('You didn\'t enter a number');
+		}
+		//Ch7
+		if(number <10){
+			for(var i=0; i<10; i++){
+				console.log(i);
+			}
+		}
+		//Ch8
+		if(number <10){
+			for(var i=0; i<10; i++){
+				if (i == number){
+					console.log(`${i}, it is your number`);
+				} else{
+					console.log(i);
+				}
+			}
+		}
+		//Ch9
+		var primeColors = ['red', 'blue', 'yellow'];
+		var secondColors = ['orange', 'green', 'purple'];
+		var color = prompt('Please enter a color', 'red');
+		var pOrS = false
+
+		for(eachColor of primeColors){
+			if(color === eachColor){
+				console.log('You entered a primary color');
+				pOrS = true;
+			}
+		}
+		for(eachColor of secondColors){
+			if(color === eachColor){
+				console.log('You entered a secondary color');
+				pOrS = true;
+			}
+		}
+		if(!pOrS){
+			console.log('Your color is neither primary nor secondary');
+		}
+		///////////////////////////////////////////////
+		//Ch10
+		function hello(){
+			console.log('hello');
+		}
+		//Ch11
+		function hello2(name){
+			console.log(`hello ${name}`);
+		}
+		//CH12
+		name = prompt('Please write your name', '');
+		hello2(name);
+		//Ch13
+		while(name == null || name == ''){
+			name = prompt('Please write your name', '');
+		}
+		//Ch14 - Ch16 were simple
+
+		//Ch17
+		document.getElementById('copyright').style.color = 'green';
+		//Ch18
+		var allPs = document.getElementsByTagName('p');
+		for(var eachEl of allPs){
+			eachEl.style.color = 'blue';
+		}
+		//Ch19
+		var heading19 = document.querySelector('h1');
+		heading19.className = 'red';
+
+		var datePs = document.getElementsByClassName('date');
+		datePs[0].className = 'red';
+		//Ch20 - Ch21
+
+		//Ch22 - Ch23 - Ch24 - Ch25 - Ch26 - Ch27 - Ch28 - Ch29 - Ch30
+		</script>
+	
+</body>
+</html>
