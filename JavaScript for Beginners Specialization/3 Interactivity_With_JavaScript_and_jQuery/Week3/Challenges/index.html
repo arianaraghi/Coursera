@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Challenges File</title>
+</head>
+
+<body>
+
+    <h1>Challenges</h1>
+
+    <form id="addpet">
+        <p>
+            <label>Name <input type="text" id="name"></label>
+        </p>
+        <p>
+            <label>Species <input type="text" id="species"></label>
+        </p>
+        <p>
+            <label>Greeting <input type="text" id="greeting"></label>
+        </p>
+        <p>
+            <input type="submit" value="add pet">
+        </p>
+    </form>
+
+    <div>
+    </div>
+    <script>
+
+        //Ch1
+        // var pet = {
+        //     name: 'Pishan',
+        //     species: 'Gorbe'
+        // }
+        // console.log(pet.name);
+
+
+        //Ch2
+        // pet.name = 'Folan';
+        // pet.species = 'Sag';
+        // console.log(`I have another pet ${pet.species} named ${pet.name}`);
+
+
+        //Ch3
+        // pet.qualities = {
+        //     colour: 'Ghahvei',
+        //     disposition: 'Vahshi',
+        //     size: 'Gonde'
+        // };
+        // console.log(pet);
+
+
+        //Ch4
+        // pet.qualities.supplies = ['Ghazaye Sag', 'Takhte Khabe Sag', 'Tashvighi', 'Ghallade', 'Band?'];
+        // console.log(`I need to get ${pet.qualities.supplies.length} supplies for ${pet.name} at the store`);
+
+
+        //Ch5
+        // pet.greeting = function(){
+        //     alert('Hop Hop Hop!');
+        // }
+        // pet.greeting();
+        // console.log(pet);
+
+
+        //Ch6
+        function pet(n, s, g) {
+            this.name = n;
+            this.species = s;
+            this.greeting = function () {
+                console.log(g);
+            }
+        }
+        // var pet1 = new pet('Folan', 'Sag', 'Hop Hop');
+        // var pet2 = new pet('Behman', 'Gorbe', 'Miu Miu');
+
+        // pet1.greeting();
+        // pet2.greeting();
+
+
+        //Ch7
+        // document.getElementById('addpet').addEventListener('submit', function(event){
+        //     event.preventDefault();
+        //     var n = document.getElementById('name').value;
+        //     var s = document.getElementById('species').value;
+        //     var g = document.getElementById('greeting').value;
+
+        //     var pet1 = new pet(n,s,g);
+        //     console.log(pet1);
+
+        // });
+
+
+        //Ch8
+        // document.getElementById('addpet').addEventListener('submit', function(evt){
+        //     evt.preventDefault();
+
+        //     var formData = evt.target.elements;
+        //     var pet1 = new pet(formData[0].value, formData[1].value, formData[2].value);
+
+        //     console.log(pet1);
+        // });
+
+
+        //Ch9
+        // document.getElementById('addpet').addEventListener('submit', function (evt) {
+        //     evt.preventDefault();
+        //     var err = 0;
+
+        //     var formData = document.querySelectorAll('input');
+        //     formData.forEach(e => {
+        //         if (e.value === '') {
+        //             err++;
+        //         }
+        //     });
+
+        //     if (err == 0) {
+        //         var pet1 = new pet(formData[0].value, formData[1].value, formData[2].value);
+        //         console.log(pet1);
+        //     }
+        //     else {
+        //         alert('Fill in the fields!');
+        //     }
+
+            
+        // });
+
+
+        //Ch10
+        // document.getElementById('addpet').addEventListener('submit', function (evt) {
+        //     evt.preventDefault();
+        //     var err = 0;
+
+        //     var formData = document.querySelectorAll('input');
+        //     formData.forEach(e => {
+        //         if (e.value === '') {
+        //             err++;
+        //         }
+        //     });
+
+        //     if (err == 0) {
+        //         var pet1 = new pet(formData[0].value, formData[1].value, formData[2].value);
+        //         var d = document.querySelector('div');
+        //         var newPet = `<p>I have a pet ${pet1.species} named ${pet1.name}</p>`;
+        //         newPet += `<p><button id = "sayhi"> Click for Greeting from ${pet1.name}</button></p>`;
+        //         d.innerHTML = newPet;
+        //         document.getElementById('sayhi').addEventListener('click', function(){pet1.greeting()});
+        //     }
+        //     else {
+        //         alert('Fill in the fields!');
+        //     }
+
+            
+        // });
+
+    </script>
+
+</body>
+
+</html>
